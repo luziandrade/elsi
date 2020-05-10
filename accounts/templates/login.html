@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% block page_title %}Login Page{% endblock %}
+
+{% block page_heading %}User Login{% endblock %}
+
+{% block content %}
+<section class="navpage">
+
+</section>
+<div class="form-middle container-sm">
+    <div class="loginage">
+        <div class="col-md-12 search">
+            <div class="section-title text-center wow zoomIn">
+                <h1>Sign In</h1>
+            </div>
+        </div>
+            <form method="POST">
+                <div class="form-group">
+                {% csrf_token %}
+                {{ login_form | as_bootstrap }}
+                <button type="submit" class="btn btn-warning">Login</button>
+                </div>
+            </form>
+    </div>
+</div>
+
+{% endblock %}
