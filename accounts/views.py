@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, reverse
-from django.contrib.auth.models import User
 from django.contrib import auth, messages
 from django.core.cache import cache
 
