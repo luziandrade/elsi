@@ -21,14 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY = 'y0mtbejno22m$i8$*3mi+kq*7-2l!aiek(m-h2qt$j*l@5p3rc'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'y0mtbejno22m$i8$*3mi+kq*7-2l!aiek(m-h2qt$j*l@5p3rc'
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['iels.herokuapp.com']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['iels.herokuapp.com']
 
 # Application definition
 
