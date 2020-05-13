@@ -4,11 +4,18 @@ from django.contrib import auth, messages
 from django.core.cache import cache
 
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+
+@login_required()
+def logout(request):
+    auth.logout(request)
+    return redirect(reverse('index'))
 
 
 def login(request):
@@ -56,5 +63,3 @@ def registration(request):
         "registration_form": registration_form})
 
 
-def faq(request):
-    return render(request, 'faq.html')

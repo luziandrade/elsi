@@ -5,24 +5,22 @@
 {% block page_heading %}User Login{% endblock %}
 
 {% block content %}
-<section class="navpage">
-
-</section>
-<div class="form-middle container-sm">
-    <div class="loginage">
-        <div class="col-md-12 search">
-            <div class="section-title text-center wow zoomIn">
-                <h1>Sign In</h1>
-            </div>
-        </div>
-            <form method="POST">
-                <div class="form-group">
-                {% csrf_token %}
-                {{ login_form | as_bootstrap }}
-                <button type="submit" class="btn btn-warning">Login</button>
+<section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Sign In</h2>
+                        <hr class="divider light my-4" />
+                            <form method="POST">
+                                <div class="form-group">
+                                 {% csrf_token %}
+                                {{ login_form | as_bootstrap }}
+                                <button type="submit" class="btn btn-light btn-xl js-scroll-trigger" >Login</button>
+                                </div>
+                            </form>
+                    </div>
                 </div>
-            </form>
-    </div>
-</div>
+            </div>
+</section>
 
 {% endblock %}
